@@ -39,7 +39,17 @@ int main() {
                 break;
 
             case 4:
-                printf("La division sera completada por el segundo integrante.\n");
+                printf("Ingresa el primer numero: ");
+                scanf("%f", &a);
+                printf("Ingresa el segundo numero: ");
+                scanf("%f", &b);
+
+                if (b != 0) {
+                    resultado = division(a, b);
+                    printf("Resultado de la division: %.2f\n", resultado);
+                } else {
+                    printf("Error: no se puede dividir entre cero.\n");
+                }
                 break;
 
             case 5:
@@ -47,7 +57,7 @@ int main() {
                 break;
 
             default:
-                printf("Opcion no valida.\n");
+                printf("Opcion no valida. Intenta de nuevo.\n");
                 break;
         }
 
@@ -72,9 +82,16 @@ float resta(float a, float b) {
 }
 
 void multiplicacion() {
-    printf("La multiplicacion sera completada por el segundo integrante.\n");
+    float a, b;
+
+    printf("Ingresa el primer numero: ");
+    scanf("%f", &a);
+    printf("Ingresa el segundo numero: ");
+    scanf("%f", &b);
+
+    printf("Resultado de la multiplicacion: %.2f\n", a * b);
 }
 
 float division(float a, float b) {
-    return 0;
+    return a / b;
 }
